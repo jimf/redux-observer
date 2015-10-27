@@ -68,9 +68,7 @@ describe('observer middleware', () => {
 
     beforeEach(() => {
       getState = stub();
-      options = {
-        compareWith: (obj1, obj2) => obj1.bar === obj2.bar
-      };
+      options = { compareWith: (obj1, obj2) => obj1.bar === obj2.bar };
       nextHandler = observerMiddleware(updateHandler, options)({ getState });
     });
 
